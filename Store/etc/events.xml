@@ -1,0 +1,6 @@
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
+    <event name="store_store_save_before">
+        <observer name="store_store_save_coordinates_observer" instance="Alexandr\Store\Observer\SaveCoordinates"/>
+<!--        <observer name="store_store_save_url_observer" instance="Alexandr\Store\Observer\SaveUrl"/>-->
+    </event>
+</config>

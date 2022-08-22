@@ -1,0 +1,19 @@
+{
+    "alexandr_store": {
+        "column": {
+            "entity_id": true,
+            "name": true,
+            "description": true,
+            "image": true,
+            "address": true,
+            "schedule": true,
+            "longitude": true,
+            "latitude": true,
+            "store_url_key": true
+        },
+        "constraint": {
+            "PRIMARY": true,
+            "ALEXANDR_STORE_STORE_URL_KEY": true
+        }
+    }
+}

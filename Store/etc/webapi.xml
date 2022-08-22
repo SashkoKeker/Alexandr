@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Webapi:etc/webapi.xsd">
+    <route url="/V1/locator/store" method="POST">
+        <service class="Alexandr\Store\Api\StoreRepositoryInterface" method="save"/>
+        <resources>
+            <resource ref="Alexandr_Store::write"/>
+        </resources>
+    </route>
+    <route url="/V1/locator/store" method="GET">
+        <service class="Alexandr\Store\Api\StoreRepositoryInterface" method="getList"/>
+        <resources>
+            <resource ref="Alexandr_Store::read"/>
+        </resources>
+    </route>
+    <route url="/V1/locator/store/:id" method="GET">
+        <service class="Alexandr\Store\Api\StoreRepositoryInterface" method="getById"/>
+        <resources>
+            <resource ref="Alexandr_Store::read"/>
+        </resources>
+    </route>
+    <route url="/V1/locator/store/:id" method="DELETE">
+        <service class="Alexandr\Store\Api\StoreRepositoryInterface" method="deleteById"/>
+        <resources>
+            <resource ref="Alexandr_Store::write"/>
+        </resources>
+    </route>
+    <route url="/V1/locator/store" method="DELETE">
+        <service class="Alexandr\Store\Api\StoreRepositoryInterface" method="delete"/>
+        <resources>
+            <resource ref="Alexandr_Store::write"/>
+        </resources>
+    </route>
+    <route url="/V1/locator/store/:id" method="PUT">
+        <service class="Alexandr\Store\Api\StoreRepositoryInterface" method="save"/>
+        <resources>
+            <resource ref="Alexandr_Store::write"/>
+        </resources>
+    </route>
+</routes>
+
+

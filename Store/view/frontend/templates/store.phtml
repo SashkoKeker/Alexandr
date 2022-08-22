@@ -1,0 +1,58 @@
+<?php
+/**
+ * @var Alexandr\Store\Block\Store $block
+ */
+
+$store = $block->getStore();
+$apiKey = $block->getGoogleApi();
+
+?>
+<?php if ($store->getId() !== null) :?>
+
+    <div class="store">
+        <div id="store-<?= $store->getId() ?>" class="store">
+            <div class="description">
+                <h3><?= __("Description: ") ?></h3>
+                <span><?= $store->getDescription() ?></span>
+            </div>
+            <div class="address">
+                <h3><?= __("Address: ") ?></h3>
+                <span><?= $store->getAddress() ?></span>
+            </div>
+            <div class="image">
+                <h3><?= __("Image: ") ?></h3>
+                <?php if($store->getImage() !== null): ?>
+                    <img src="<?= '/pub/media/store/base_path/' . $store->getImage() ?>" alt="Store image" width="" height="400"/>
+                <?php else: ?>
+                    <h4>No image</h4>
+                <?php endif; ?>
+            </div>
+            <div class="schedule">
+                <?php if($store->getSchedule() !== null): ?>
+                    <h3><?= __("Schedule")?> </h3>
+                    <span>
+                <?= $block->unserializeSchedule($store); ?>
+            </span>
+                <?php endif; ?>
+            </div>
+            <div class="longitude">
+                <h3><?= __("Longitude: ") ?></h3>
+                <span><?= $store->getLongitude() ?></span>
+            </div>
+            <div class="latitude">
+                <h3><?= __("Latitude: ")?></h3>
+                <span><?= $store->getLatitude() ?></span>
+            </div>
+        </div>
+    </div>
+    <iframe
+        width="600"
+        height="450"
+        style="border:0"
+        loading="lazy"
+        allowfullscreen
+        referrerpolicy="no-referrer-when-downgrade"
+        src="https://www.google.com/maps/embed/v1/place?key=<?=$apiKey?>
+    &q=<?= $store->getAddress() ?>">
+    </iframe>
+<?php endif; ?>

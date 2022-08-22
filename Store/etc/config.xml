@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <store>
+            <general>
+                <enable>1</enable>
+                <google_api_key>No api key</google_api_key>
+            </general>
+        </store>
+    </default>
+</config>

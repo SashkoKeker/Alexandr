@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Alexandr_Store::menu_1" title="Alexandr store" module="Alexandr_Store" sortOrder="51" resource="Alexandr_Store::menu_1"/>
+        <add id="Alexandr_Store::store" title="Locator" module="Alexandr_Store" sortOrder="10"  parent="Alexandr_Store::menu_1" action="store/store/index" resource="Alexandr_Store::store"/>
+        <add id="Alexandr_Store::config" title="Configuration" module="Alexandr_Store" sortOrder="99" parent="Alexandr_Store::menu_1" action="adminhtml/system_config/edit/section/menu_1"  resource="Alexandr_Store::store_config"/>
+
+    </menu>
+</config>
